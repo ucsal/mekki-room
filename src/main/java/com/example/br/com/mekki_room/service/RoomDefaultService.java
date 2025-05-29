@@ -33,4 +33,10 @@ public class RoomDefaultService implements  RoomService{
     public List<Room> roomListAvailable() {
         return repository.findAll();
     }
+
+    @Override
+    public Boolean roomIsAvailable(Integer id) {
+        Room room = repository.findById(id).get();
+        return room.getIsAvailable();
+    }
 }

@@ -14,4 +14,6 @@ public interface RoomService {
     List<Room> roomList();
 
     List<Room> roomListAvailable();
+
+    Boolean roomIsAvailable(Integer id);
 }

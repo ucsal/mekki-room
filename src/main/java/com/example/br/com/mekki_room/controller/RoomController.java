@@ -31,6 +31,11 @@ public class RoomController {
         return service.roomList();
     }
 
+    @GetMapping("/{id}")
+    public Boolean isAvailable(@PathVariable Integer id){
+        return  service.roomIsAvailable(id);
+    }
+
 
     @GetMapping("/list/available")
     public List<Room> findAllAvaliable() {
